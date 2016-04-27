@@ -122,4 +122,13 @@ For servers that use ``systemd``, instead run this command:
 
 The server is now running HAProxy.  When new connections are made to this server, it routes them through to nodes in the cluster.
 
+----------------------
+Centos / RHEL
+----------------------
+.. _`SELINUX`:
 
+Dont forget set the SELINUX in permisive mode. Otherwise, you will get an bind ip address error.
+
+.. code-block:: console
+
+   # setenforce 0
